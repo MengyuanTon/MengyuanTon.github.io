@@ -8,26 +8,23 @@
 #      Markdown formatted page while the second is generated using JSON.
 
 main:
+  - title: "About Me"
+    url: /#about-me
+
+  - title: "News"
+    url: /#news
+
   - title: "Publications"
-    url: /publications/
+    url: /#publications
 
-  - title: "Talks"
-    url: /talks/    
+  - title: "Manuscripts"
+    url: /#manuscripts
 
-  - title: "Teaching"
-    url: /teaching/    
-    
-  - title: "Portfolio"
-    url: /portfolio/
-        
-  - title: "Blog Posts"
-    url: /year-archive/
-    
+  - title: "Education"
+    url: /#education
+
+  - title: "Honors & Awards"
+    url: /#honors-awards
+
   - title: "CV"
-    url: /cv/
-    
-  # - title: "CV"
-  #   url: /cv-json/
-    
-  - title: "Guide"
-    url: /markdown/
+    url: /files/仝梦园 - 简历 - 4月.pdf
