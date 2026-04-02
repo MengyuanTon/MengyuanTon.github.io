@@ -23,12 +23,12 @@ repository               : "MengyuanTon/MengyuanTon.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "白色证件照.jpg"
+  avatar           : "白底证件照.jpg"
   name             : "Mengyuan Tong"
   pronouns         : # example: "she/her"  
   bio              : "National University of Defense Technology <br> Graduate student working on machine learning and data mining."
   location         : "Changsha, Hunan, China"
-  employer         : "School of Science <br> National University of Defense Technology"
+  employer         : "School of Science <br> National University of Defense <br> Technology"
   uri              : # URL
   email            : "18807087023@163.com" 
 
