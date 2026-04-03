@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+  <title>仝梦园 - 简历</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    /* ── 打印时隐藏提示按钮 ── */
+    @page {
+      size: A4;
+      margin: 16mm 14mm 14mm 14mm;
+    }
+    @media print {
+      .print-hint { display: none !important; }
+      html, body { background: white !important; padding: 0 !important; margin: 0 !important; }
+      .page {
+        box-shadow: none !important; margin: 0 !important;
+        padding: 0 !important; max-width: 100% !important;
+        border-radius: 0 !important;
+      }
+      body { font-size: 11.5px !important; }
+      section { margin-bottom: 7px !important; }
+      .sec-title { margin-bottom: 6px !important; padding-bottom: 3px !important; }
+      .header { margin-bottom: 10px !important; padding-bottom: 8px !important; }
+    }
+
+    :root {
+      --primary: #1a3a5c;
+      --accent:  #2563eb;
+      --green:   #16a34a;
+      --border:  #e2e8f0;
+      --muted:   #64748b;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Inter", "Noto Sans SC", "PingFang SC", Arial, sans-serif;
+      font-size: 13px; color: #1e293b;
+      background: #f0f4f8; padding: 32px 20px;
+    }
+    .page {
+      background: #fff; max-width: 794px;
+      margin: 0 auto;
+      padding: 36px 44px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+      border-radius: 8px;
+    }
+
+    /* print hint */
+    .print-hint {
+      text-align: center; margin-bottom: 18px;
+      font-size: 13px; color: #64748b;
+    }
+    .print-hint button {
+      cursor: pointer; background: #2563eb; color: #fff;
+      border: none; border-radius: 6px;
+      padding: 8px 20px; font-size: 13px; font-weight: 600;
+      margin-left: 8px;
+    }
+
+    /* ── 顶部信息栏 ── */
+    .header { border-bottom: 2.5px solid var(--primary); padding-bottom: 12px; margin-bottom: 14px; }
+    .header-top { display: flex; align-items: flex-start; }
+    .header-left { flex: 1; }
+    .name-block h1 { font-size: 26px; font-weight: 800; color: var(--primary); letter-spacing: .04em; }
+    .name-block h1 span { font-size: 15px; font-weight: 400; color: #94a3b8; margin-left: 10px; letter-spacing: 0; }
+    .name-block p  { font-size: 12px; color: var(--muted); margin: 3px 0 8px; }
+    .contact-inline { display: flex; flex-wrap: wrap; gap: 14px; font-size: 12px; color: var(--muted); }
+    .contact-inline a { color: var(--accent); }
+    .id-photo { width: 92px; height: 122px; object-fit: cover; object-position: center 5%; border: none; flex-shrink: 0; margin-left: 20px; margin-top: -6px; }
+
+    /* ── section ── */
+    section { margin-bottom: 10px; }
+    .sec-title {
+      font-size: 12px; font-weight: 800; text-transform: uppercase;
+      letter-spacing: .1em; color: var(--accent);
+      border-bottom: 1.5px solid var(--border);
+      padding-bottom: 4px; margin-bottom: 10px;
+    }
+
+    /* ── edu row ── */
+    .row { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 2px; }
+    .row-left  { flex: 1; }
+    .row-right { text-align: right; font-size: 12px; color: var(--muted); white-space: nowrap; }
+    .inst   { font-weight: 700; font-size: 13.5px; }
+    .sub    { font-size: 12px; color: var(--muted); margin-top: 1px; }
+    .badges-inline { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 4px; }
+    .badge-sm {
+      background: #eff6ff; color: var(--primary);
+      border: 1px solid #bfdbfe;
+      border-radius: 4px; padding: 1px 7px; font-size: 11px; font-weight: 600;
+    }
+    .badge-sm.gold { background: #fef9c3; color: #92400e; border-color: #fde68a; }
+    .badge-sm.green { background: #f0fdf4; color: #166534; border-color: #bbf7d0; }
+    .edu-detail { font-size: 12px; margin-top: 4px; color: #374151; }
+    .edu-detail span { margin-right: 14px; }
+    .edu-detail strong { color: var(--primary); }
+
+    /* ── paper ── */
+    .paper { padding: 8px 12px; background: #f8faff; border-left: 3px solid var(--accent); border-radius: 0 6px 6px 0; margin-bottom: 6px; }
+    .paper-title { font-weight: 700; font-size: 12.5px; line-height: 1.5; }
+    .paper-meta  { font-size: 11.5px; color: var(--muted); margin-top: 2px; }
+
+    /* ── award table ── */
+    .award-list { list-style: none; }
+    .award-list li {
+      display: flex; align-items: flex-start; gap: 8px;
+      padding: 5px 0; border-bottom: 1px solid #f1f5f9; font-size: 12.5px;
+    }
+    .award-list li:last-child { border-bottom: none; }
+    .aw-icon { font-size: 1rem; flex-shrink: 0; }
+    .aw-name { font-weight: 600; }
+    .aw-sub  { color: var(--muted); font-size: 11.5px; }
+
+    /* ── skills ── */
+    .skill-row { display: flex; gap: 8px; margin-bottom: 5px; flex-wrap: wrap; align-items: center; }
+    .skill-cat { font-size: 11.5px; font-weight: 700; color: var(--muted); width: 88px; flex-shrink: 0; }
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+    .stag {
+      background: #f1f5f9; border: 1px solid var(--border);
+      border-radius: 4px; padding: 2px 8px; font-size: 11.5px;
+    }
+
+    /* ── research interests ── */
+    .interest-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .itag {
+      background: #f0fdf4; color: #166534;
+      border: 1px solid #bbf7d0;
+      border-radius: 5px; padding: 3px 10px; font-size: 12px; font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+
+<div class="print-hint">
+  💡 点击下方按钮或按 <strong>Ctrl+P</strong> → 另存为 PDF
+  <button onclick="window.print()">🖨 打印 / 另存为 PDF</button>
+</div>
+
+<div class="page">
+
+  <!-- ══ 顶部 ══ -->
+  <div class="header">
+    <div class="header-top">
+      <div class="header-left">
+        <div class="name-block">
+          <h1>仝梦园 <span>Mengyuan Tong</span></h1>
+          <p>2002年08月25日 &nbsp;·&nbsp; 女 &nbsp;·&nbsp; 硕士在读 · 国防科技大学（2025–2027）</p>
+          <p style="margin-top:2px;">求职城市：全国各地均可 &nbsp;·&nbsp; 求职类型：实习，可长期</p>
+        </div>
+        <div class="contact-inline">
+          <span>✉ <a href="mailto:18807087023@163.com">18807087023@163.com</a></span>
+          <span>📱 <a href="tel:18807087023">188-0708-7023</a></span>
+          <span>🐙 <a href="https://github.com/MengyuanTong">github.com/MengyuanTong</a></span>
+        </div>
+      </div>
+      <img class="id-photo" src="/images/白底证件照.jpg" alt="证件照">
+    </div>
+  </div>
+
+  <!-- ══ 求职意向 ══ -->
+  <section style="margin-bottom:10px;">
+    <div class="sec-title">求职意向</div>
+    <table style="font-size:12.5px;color:#374151;border-collapse:collapse;line-height:1.6;width:100%;">
+      <tr>
+        <td style="padding:1px 0;width:72px;color:var(--muted);font-weight:700;vertical-align:top;">目标岗位</td>
+        <td><strong>算法工程师实习 &nbsp;·&nbsp; 大模型算法实习 &nbsp;·&nbsp; AI 视觉算法实习</strong></td>
+      </tr>
+      <tr>
+        <td style="padding:1px 0;color:var(--muted);font-weight:700;vertical-align:top;">可实习时间</td>
+        <td><strong>2026 年暑期起，可长期</strong></td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- 教育背景 -->
+  <section>
+    <div class="sec-title">教育背景</div>
+    <div class="row" style="margin-bottom:8px;">
+      <div class="row-left">
+        <div class="inst">国防科技大学
+          <span class="badge-sm gold" style="margin-left:8px;vertical-align:middle;">A+ 学科</span>
+          <span class="badge-sm green" style="vertical-align:middle;">推荐免试录取</span>
+          <span style="font-size:12px;font-weight:400;color:var(--muted);margin-left:6px;">硕士研究生 · 系统科学 · 统计机器学习方向</span>
+        </div>
+      </div>
+      <div class="row-right">2025.09 – 2027.07</div>
+    </div>
+    <div class="row">
+      <div class="row-left">
+        <div class="inst">江西财经大学
+          <span class="badge-sm gold" style="margin-left:8px;vertical-align:middle;">A- 学科 · 国家重点实验室 </span>
+          <span class="badge-sm green" style="vertical-align:middle;">专业排名 Top 2</span>
+          <span style="font-size:12px;font-weight:400;color:var(--muted);margin-left:6px;">本科 · 应用统计学</span>
+        </div>
+      </div>
+      <div class="row-right">2021.09 – 2025.06</div>
+    </div>
+  </section>
+
+  <!-- ══ 研究方向 ══ -->
+  <section>
+    <div class="sec-title">研究方向</div>
+    <div class="interest-tags">
+      <span class="itag">偏标签学习</span>
+      <span class="itag">多视图学习</span>
+      <span class="itag">不平衡学习</span>
+      <span class="itag">弱监督学习</span>
+      <span class="itag">数据挖掘</span>
+      <span class="itag">大模型辅助标注</span>
+      <span class="itag">深度学习</span>
+    </div>
+  </section>
+
+  <!-- ══ 论文 & 科研经历 ══ -->
+  <section>
+    <div class="sec-title">科研经历</div>
+    <div style="width:100%;">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:4px;">
+        <div class="inst" style="font-size:13px;">深度偏标签特征选择方法研究
+          <span style="font-size:11.5px;font-weight:400;color:var(--muted);"> · 国防科技大学 &nbsp;·&nbsp; 导师：罗廷金教授</span>
+        </div>
+        <div style="font-size:12px;color:var(--muted);white-space:nowrap;">2024 – 2025</div>
+      </div>
+      <div class="sub" style="margin:4px 0 6px;font-size:12px;line-height:1.7;">
+        Tingjin Luo, <strong>Mengyuan Tong</strong>. "CLASS: Deep Partial Label Feature Selection with Cluster-Guided Disambiguation and Structured Sparsity". In <em>Proceedings of the 32nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining</em> (KDD 2026). ACM, 2026.&ensp;<span style="background:#fef3c7;color:#92400e;font-weight:700;padding:2px 8px;border-radius:4px;font-size:10.5px;border:1.5px solid #f59e0b;">CCF-A 顶会</span>&ensp;<a href="https://mengyuanton.github.io/files/Class deep partial label feature selection with cluster-guided disambiguation and structured sparsity.pdf" target="_blank" style="font-size:11px;font-weight:600;color:var(--accent);text-decoration:none;background:#eff6ff;border:1px solid #bfdbfe;border-radius:4px;padding:2px 8px;">🔗 论文链接</a>
+      </div>
+      <p style="font-size:12px;color:#374151;line-height:1.75;width:100%;">
+        针对偏标签学习中<strong>特征冗余与标签歧义并存</strong>的核心问题，独立提出 CLASS 算法框架，将<strong>聚类表示学习</strong>与<strong>结构稀疏正则化</strong>联合建模；推导交替优化求解策略并完成<strong>理论收敛性证明</strong>；使用 <strong>Python / PyTorch</strong> 独立实现全套实验代码，在多个公开数据集上完成基线对比与消融分析；全程负责英文论文写作，成果录用于 ACM SIGKDD 2026。
+      </p>
+    </div>
+  </section>
+
+  <!-- ══ 项目经历 ══ -->
+  <section>
+    <div class="sec-title">项目经历</div>
+    <div style="width:100%;">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:4px;">
+        <div class="inst" style="font-size:13px;">基于 RAG 与多层记忆的学术文献智能问答系统
+          <span style="font-size:11.5px;font-weight:400;color:var(--muted);"> · 个人独立项目</span>
+          &ensp;<a href="https://github.com/MengyuanTon/ai-knowledge-base" target="_blank" style="font-size:11px;font-weight:600;color:var(--accent);text-decoration:none;background:#eff6ff;border:1px solid #bfdbfe;border-radius:4px;padding:1px 7px;">🔗 代码链接</a>
+        </div>
+        <div style="font-size:12px;color:var(--muted);white-space:nowrap;">2025</div>
+      </div>
+      <p style="font-size:12px;color:#374151;line-height:1.75;margin-top:5px;width:100%;">
+        面向科研课题组独立设计并实现一套<strong>全栈 AI 知识库问答系统</strong>，支持上传 PDF / Word 学术文献并进行深度多轮对话。① 以 <strong>ChromaDB 语义向量检索与 BM25 关键词检索</strong>混合召回，配合余弦相似度驱动的动态语义分块，提升检索精度与上下文完整性；② 集成<strong>滑动窗口加摘要压缩的短期记忆</strong>与 <strong>ChromaDB 持久化长期记忆</strong>，实现跨轮遗忘抑制与用户偏好留存；③ 引入 <strong>Function Calling</strong> 对接 SQLite，支持按作者、年份、数据集等维度结构化查询；④ 基于 <strong>FastAPI</strong> 构建 RESTful 后端，调用 <strong>DeepSeek-V3</strong> 大模型并集成限流、重试与 Token 预算监控，前端以纯 HTML 实现聊天、文献管理与记忆面板。
+      </p>
+    </div>
+  </section>
+
+  <!-- ══ 荣誉奖项 ══ -->
+  <section>
+    <div class="sec-title">荣誉奖项</div>
+    <ul style="list-style:disc;padding-left:16px;font-size:12.5px;color:#374151;line-height:1.75;">
+      <li style="margin-bottom:4px;">
+        <strong>国家奖学金</strong>&ensp;<span style="background:#fef9c3;color:#92400e;font-weight:700;padding:1px 7px;border-radius:4px;font-size:10.5px;border:1.5px solid #f59e0b;">教育部</span>&ensp;·&ensp;一等优秀学生奖学金（多次）
+      </li>
+      <li style="margin-bottom:4px;"><strong>2024 &nbsp;第十四届"正大杯"全国市场调查与分析大赛</strong>&ensp;<span style="background:#fee2e2;color:#b91c1c;font-weight:700;padding:1px 7px;border-radius:4px;font-size:10.5px;border:1.5px solid #fca5a5;">全国一等奖</span>
+        <span style="display:block;font-size:11.5px;color:var(--muted);margin-top:1px;line-height:1.6;">以高校 AIGC 使用现状为研究主题，融合爬虫数据与问卷数据，运用 XGBoost-SHAP、情感分析、演化博弈等方法，深入挖掘师生对 AIGC 的态度差异及关键影响因素，提出针对性建议</span>
+      </li>
+      <li style="margin-bottom:4px;"><strong>2024 &nbsp;全国大学生统计建模大赛</strong>&ensp;<span style="background:#fee2e2;color:#b91c1c;font-weight:700;padding:1px 7px;border-radius:4px;font-size:10.5px;border:1.5px solid #fca5a5;">全国一等奖</span>
+        <span style="display:block;font-size:11.5px;color:var(--muted);margin-top:1px;line-height:1.6;">针对风电功率预测问题，构建 WD-BO-QRBiLSTM 模型，点预测与区间预测精度均优于 BiLSTM 等基线模型</span>
+      </li>
+      <li style="margin-bottom:4px;">2023 &nbsp;华数杯国际数学建模大赛 &nbsp;<strong>全国二等奖</strong></li>
+      <li>2023 &nbsp;第十三届 Mathor Cup 高校数学建模大赛 &nbsp;<strong>全国三等奖</strong></li>
+    </ul>
+  </section>
+
+  <!-- ══ 个人评价 ══ -->
+  <section>
+    <div class="sec-title">个人评价</div>
+    <p style="font-size:12.5px;color:#374151;line-height:1.8;">
+      喜欢动手，有想法就会自己去实现；对新东西上手快，遇到不会的会查、会问、会学；性格开朗，合作没有障碍。
+    </p>
+  </section>
+
+</div><!-- /page -->
+</body>
+</html>
