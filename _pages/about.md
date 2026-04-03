@@ -8,13 +8,10 @@ redirect_from:
 ---
 
 # About me {#about-me}
-Hi there! I am **Mengyuan Tong** (Chinese: 仝梦园). I am currently a graduate student at the School of Science, [National University of Defense Technology (NUDT)](https://www.nudt.edu.cn/), under the supervision of Prof. Tingjin Luo. I received my Bachelor's degree in Applied Statistics from Jiangxi University of Finance and Economics in 2025, where I ranked **2nd out of 83** students (Top 2.4%) with a weighted GPA of **92.28/100**.
 
-My research interests focus on **machine learning** and **data mining**, aiming to develop efficient and reliable algorithms for learning from weakly supervised data. Specifically, my interests include:
-- Partial label learning
-- Multi-view learning
-- Imbalanced & weakly supervised learning
-- Deep learning and LLM-assisted annotation
+I'm **Mengyuan Tong** (仝梦园), a first-year M.S. student in Systems Science at [National University of Defense Technology (NUDT)](https://www.nudt.edu.cn/), working with [Prof. Tingjin Luo](https://horizonailab.github.io/). I got my B.Sc. in Applied Statistics from Jiangxi University of Finance and Economics in 2025, graduating ranked 2nd in my class (GPA 92.28/100).
+
+I work on **machine learning** and **data mining**, with a focus on weakly supervised learning — partial label learning, multi-view learning, and learning with noisy or incomplete supervision.
 
 
 ## 📝 Publications {#publications}
@@ -32,7 +29,7 @@ My research interests focus on **machine learning** and **data mining**, aiming 
       <span style="background:#fef3c7;color:#92400e;font-weight:700;padding:1px 7px;border-radius:4px;font-size:0.85em;border:1px solid #f59e0b;">CCF-A</span>
     </p>
     <p style="margin:0;font-size:0.92em;color:#374151;line-height:1.6;">
-      Proposes the CLASS framework that jointly models cluster-guided label disambiguation and structured sparsity regularization for partial label feature selection. Derives an alternating optimization solver with provable convergence guarantees.
+      A unified framework for partial label feature selection, jointly tackling label disambiguation via cluster guidance and feature selection via structured sparsity.
     </p>
     <p style="margin:10px 0 0;">
       <a href="https://mengyuanton.github.io/files/Class deep partial label feature selection with cluster-guided disambiguation and structured sparsity.pdf" target="_blank" style="display:inline-block;padding:4px 12px;background:#2563eb;color:#fff;border-radius:5px;font-size:0.88em;font-weight:600;text-decoration:none;margin-right:8px;">📄 Paper</a>
@@ -54,14 +51,8 @@ My research interests focus on **machine learning** and **data mining**, aiming 
       <strong>Academic Literature Q&A Agent</strong> &nbsp;·&nbsp; <em>Personal Independent Project, 2025</em>
     </p>
     <p style="margin:0 0 10px;font-size:0.92em;color:#374151;line-height:1.6;">
-      A full-stack AI knowledge base system for research groups, supporting PDF/Word upload and multi-turn conversational retrieval.
-      <br>① <strong>Hybrid RAG</strong>: ChromaDB semantic search + BM25 keyword search with RRF fusion; semantic chunking with cosine-similarity-driven dynamic merging; query rewriting via short-term memory.
-      <br>② <strong>Memory System</strong>: sliding-window short-term memory with LLM summary compression; ChromaDB-persisted long-term memory for user preferences.
-      <br>③ <strong>Function Calling</strong>: LLM-driven structured queries to SQLite by author / year / dataset / method.
-      <br>④ <strong>Engineering</strong>: FastAPI backend, DeepSeek-V3, rate limiting + retry + token budget monitoring.
-    </p>
-    <p style="margin:0;font-size:0.85em;color:#555;">
-      <em>Stack: Python · FastAPI · ChromaDB · BM25/jieba · SQLite · DeepSeek-V3 · BAAI/bge-small-zh-v1.5</em>
+      A document Q&A system I built for my research group — upload papers, ask questions, get answers grounded in your own literature. Built with hybrid RAG (vector + BM25), multi-turn memory, and function calling over DeepSeek-V3.<br>
+      <em style="color:#888;">Python · FastAPI · ChromaDB · BM25 · SQLite · DeepSeek-V3</em>
     </p>
     <p style="margin:10px 0 0;">
       <a href="https://github.com/MengyuanTon/ai-knowledge-base" target="_blank" style="display:inline-block;padding:4px 12px;background:#1a3a5c;color:#fff;border-radius:5px;font-size:0.88em;font-weight:600;text-decoration:none;margin-right:8px;">🐙 Code</a>
